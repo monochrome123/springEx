@@ -1,7 +1,6 @@
 package org.lsy0318.web;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
 
 import javax.inject.Inject;
 import javax.sql.DataSource;
@@ -15,14 +14,14 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @ContextConfiguration(locations = { "file:src/main/webapp/WEB-INF/spring/root-context.xml" })
 public class DBTester {
 
-	@Test
-	public void testDBConnection() throws Exception {
-	Class.forName("com.mysql.cj.jdbc.Driver");
-	Connection con = DriverManager.getConnection(
-	"jdbc:mysql://localhost/spring_ex?useSSL=false&serverTimezone=Asia/Seoul", "monochrome", "smfdlajdajd");
-	System.out.println(con);
-	con.close();
-	}
+//	@Test
+//	public void testDBConnection() throws Exception {
+//	Class.forName("com.mysql.cj.jdbc.Driver");
+//	Connection con = DriverManager.getConnection(
+//	"jdbc:mysql://localhost/spring_ex?useSSL=false&serverTimezone=Asia/Seoul", "monochrome", "smfdlajdajd");
+//	System.out.println(con);
+//	con.close();
+//	}
 
 	@Inject
 	private DataSource ds;
